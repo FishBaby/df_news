@@ -1,4 +1,4 @@
-package com.cjt.controller;
+package com.df.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -7,11 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.cjt.domain.User;
-import com.cjt.service.IUserService;
+import com.df.domain.User;
+import com.df.service.IUserService;
 
 /**
- * @author alun
+ * @author FishBaby
  *
  */
 @Controller
@@ -24,14 +24,23 @@ public class UserController {
 
 	@Resource
 	private IUserService userService;
-	
+	private User user;
 	@RequestMapping("/showUser")
 	public String toIndex(HttpServletRequest request,Model model) {
-		System.out.println("UserController showUser");
-		int id = Integer.parseInt(request.getParameter("id"));  
-        User user = userService.getUserById(id);  
-        model.addAttribute("user", user);  
+		int id = Integer.parseInt(request.getParameter("id"));
+		if(user == null) {
+			user = new User();
+		}
+        user.setId(new Long(1));
+		User resUser = userService.getUserById(user); 
+		System.out.println(resUser.toString());
+        model.addAttribute("user", resUser);  
         return "showUser";  
 	}
-	
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 }
