@@ -15,7 +15,7 @@ import com.df.service.IUserService;
  *
  */
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/df/user")
 public class UserController {
 	
 	public UserController() {
@@ -25,7 +25,8 @@ public class UserController {
 	@Resource
 	private IUserService userService;
 	private User user;
-	@RequestMapping("/showUser")
+	@SuppressWarnings("unused")
+	@RequestMapping("/showUser.do")
 	public String toIndex(HttpServletRequest request,Model model) {
 		int id = Integer.parseInt(request.getParameter("id"));
 		if(user == null) {
