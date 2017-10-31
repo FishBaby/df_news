@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.df.dao.IUserDao">
   <sql id="Base_Column_List">
-    id, name, nick_name, gender, email, phone, account, password
+    id, name, nickName, gender, email, phone, account, password
   </sql>
   <select id="selectById" resultType="com.df.domain.User" parameterType="com.df.domain.User" >
-  	select id, name, nick_name, gender, email, phone, account, password
+  	select id, name, nickName, gender, email, phone, account, password,age
   	from userinfo
   	where id = #{id}
   </select>
