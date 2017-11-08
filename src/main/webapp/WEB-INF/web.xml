@@ -76,6 +76,6 @@
 		<location>/403.jsp</location>
 	</error-page>
 	<welcome-file-list>
-		<welcome-file>test.html</welcome-file>
+		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 </web-app>
