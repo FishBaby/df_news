@@ -23,7 +23,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>springmvc</servlet-name>
-		<url-pattern>/df/*</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	<!-- <servlet>
 		<servlet-name>CXFServlet</servlet-name>
@@ -76,6 +76,6 @@
 		<location>/403.jsp</location>
 	</error-page>
 	<welcome-file-list>
-		<welcome-file>index2.html</welcome-file>
+		<welcome-file>/WEB-INF/jsp/index2.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>
