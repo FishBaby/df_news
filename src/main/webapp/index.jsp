@@ -14,7 +14,7 @@
 
     <!-- Core Stylesheet -->
     
-    <link rel="stylesheet" href="/style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/others/animate.css" type="text/css">
     <link rel="stylesheet" href="css/others/magnific-popup.css" type="text/css">
