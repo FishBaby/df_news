@@ -42,6 +42,10 @@ public class UserController {
 		return "showUser";
 	}
 
+	@RequestMapping("/")
+	public String index() {
+		return "/index.html";
+	}
 
 	public User getUser() {
 		return user;
