@@ -5,7 +5,7 @@
     id, name, nickName, gender, email, phone, account, password
   </sql>
   <select id="selectById" resultType="com.df.domain.User" parameterType="com.df.domain.User" >
-  	select id, name, nickName, gender, email, phone, account, password,age
+  	select id, name, nick_name, gender, email, phone, account, password
   	from userinfo
   	where id = #{id}
   </select>

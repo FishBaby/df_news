@@ -30,7 +30,7 @@ public class UserController {
 	private IUserService userService;
 	private User user;
 
-	@RequestMapping("/showUser.do")
+	@RequestMapping("/showUser")
 	public String toIndex(HttpServletRequest request, Model model) {
 		if (user == null) {
 			user = new User();
